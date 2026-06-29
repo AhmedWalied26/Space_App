@@ -3,9 +3,8 @@ import 'package:space_app/core/app_colors.dart';
 import 'package:space_app/views/explore_view.dart';
 
 class CustomButton extends StatelessWidget {
-  final String title;
   const CustomButton({super.key, required this.title});
-
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Padding(
