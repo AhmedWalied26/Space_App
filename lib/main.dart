@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:space_app/views/details_view.dart';
+import 'package:space_app/views/explore_view.dart';
 import 'package:space_app/views/home_view.dart';
 
 void main() {
@@ -13,7 +15,11 @@ class SpaceApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: HomeView(),
+      routes: {
+        '/': (context) => HomeView(),
+        'exploreView': (context) => ExploreView(),
+        'detailsView': (context) => DetailsView(),
+      },
     );
   }
 }
