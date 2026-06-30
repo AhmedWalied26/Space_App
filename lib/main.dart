@@ -18,7 +18,6 @@ class SpaceApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeView(),
         'exploreView': (context) => ExploreView(),
-        'detailsView': (context) => DetailsView(),
       },
     );
   }

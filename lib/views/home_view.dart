@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/core/app_colors.dart';
+import 'package:space_app/views/explore_view.dart';
 import 'package:space_app/widgets/body_home_view.dart';
 import 'package:space_app/widgets/custom_button.dart';
 
@@ -21,7 +22,12 @@ class HomeView extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SafeArea(child: BodyHomeView()),
-        bottomNavigationBar: CustomButton(title: 'Explore'),
+        bottomNavigationBar: CustomButton(
+          onTap: () {
+            Navigator.pushNamed(context, ExploreView.routePath);
+          },
+          title: 'Explore',
+        ),
       ),
     );
   }

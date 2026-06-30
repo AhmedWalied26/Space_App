@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/core/app_colors.dart';
-import 'package:space_app/views/details_view.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.title});
+  const CustomButton({super.key, required this.title, required this.onTap});
   final String title;
+  final Function onTap;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(24),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, DetailsView.routePath);
+          onTap();
         },
         style: ElevatedButton.styleFrom(backgroundColor: AppColors.red),
         child: Padding(

@@ -3,11 +3,13 @@ import 'package:space_app/core/app_colors.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final String subTitle;
   final double height;
   final bool hasLeading;
   const CustomAppbar({
     super.key,
     required this.title,
+    required this.subTitle,
     this.height = 150,
     this.hasLeading = false,
   });
@@ -37,7 +39,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       centerTitle: true,
       title: Text(
-        'Earth',
+        title,
         style: TextStyle(
           fontSize: 24,
           color: AppColors.white,
@@ -51,7 +53,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           alignment: .topStart,
           margin: EdgeInsets.only(left: 16),
           child: Text(
-            title,
+            subTitle,
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontFamily: 'SpaceGrotesk',
