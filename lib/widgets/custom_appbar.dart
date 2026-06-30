@@ -2,18 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:space_app/core/app_colors.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppbar({super.key});
+  final String title;
+  final double height;
+  final bool hasLeading;
+  const CustomAppbar({
+    super.key,
+    required this.title,
+    this.height = 150,
+    this.hasLeading = false,
+  });
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 150);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight + height);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      scrolledUnderElevation: 0,
+      leading: hasLeading
+          ? Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: CircleAvatar(
+                backgroundColor: AppColors.red,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.arrow_back),
+                  color: AppColors.white,
+                ),
+              ),
+            )
+          : SizedBox(),
       backgroundColor: Colors.transparent,
       centerTitle: true,
       title: Text(
-        'Explore',
+        'Earth',
         style: TextStyle(
           fontSize: 24,
           color: AppColors.white,
@@ -27,7 +51,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           alignment: .topStart,
           margin: EdgeInsets.only(left: 16),
           child: Text(
-            'Which planet\nwould you like to explore?',
+            title,
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontFamily: 'SpaceGrotesk',

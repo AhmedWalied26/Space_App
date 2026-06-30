@@ -6,7 +6,7 @@ import 'package:space_app/widgets/planet_navigation.dart';
 import 'package:space_app/widgets/planet_page_view.dart';
 
 class ExploreView extends StatefulWidget {
-  ExploreView({super.key});
+  const ExploreView({super.key});
 
   static const routePath = 'exploreView';
 
@@ -41,7 +41,11 @@ class _ExploreViewState extends State<ExploreView> {
         ),
       ),
       child: Scaffold(
-        appBar: CustomAppbar(),
+        appBar: CustomAppbar(
+          title: 'Which planet\nwould you like to explore?',
+
+          height: 150,
+        ),
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
