@@ -3,7 +3,7 @@ import 'package:space_app/views/explore_view.dart';
 import 'package:space_app/views/home_view.dart';
 
 void main() {
-  runApp(SpaceApp());
+  runApp(const SpaceApp());
 }
 
 class SpaceApp extends StatelessWidget {
@@ -13,7 +13,6 @@ class SpaceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
       routes: {
         '/': (context) => HomeView(),
         'exploreView': (context) => ExploreView(),

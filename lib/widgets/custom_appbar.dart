@@ -35,12 +35,12 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             )
-          : SizedBox(),
+          : const SizedBox(),
       backgroundColor: Colors.transparent,
       centerTitle: true,
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 24,
           color: AppColors.white,
           fontWeight: FontWeight.w700,
@@ -54,7 +54,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           margin: EdgeInsets.only(left: 16),
           child: Text(
             subTitle,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w700,
               fontFamily: 'SpaceGrotesk',
               color: AppColors.white,

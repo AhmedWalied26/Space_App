@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: SafeArea(child: BodyHomeView()),
+        body: SafeArea(child: const BodyHomeView()),
         bottomNavigationBar: CustomButton(
           onTap: () {
             Navigator.pushNamed(context, ExploreView.routePath);

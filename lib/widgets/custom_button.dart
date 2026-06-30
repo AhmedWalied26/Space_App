@@ -28,7 +28,7 @@ class CustomButton extends StatelessWidget {
                   fontFamily: 'Inter',
                 ),
               ),
-              Icon(Icons.arrow_forward, color: AppColors.white, size: 24),
+              const Icon(Icons.arrow_forward, color: AppColors.white, size: 24),
             ],
           ),
         ),

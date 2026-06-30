@@ -17,13 +17,13 @@ class ExploreView extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: CustomAppbar(
+        appBar: const CustomAppbar(
           title: 'Explore',
           subTitle: 'Which planet\nwould you like to explore?',
           height: 150,
         ),
         backgroundColor: Colors.transparent,
-        body: BodyExploreView(),
+        body: const BodyExploreView(),
       ),
     );
   }
