@@ -1,29 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_3d_controller/flutter_3d_controller.dart';
+import 'package:space_app/core/app_colors.dart';
 import 'package:space_app/models/page_view_model.dart';
 import 'package:space_app/widgets/text_details.dart';
 
-class BodyDetailsView extends StatelessWidget {
+class BodyDetailsView extends StatefulWidget {
   const BodyDetailsView({super.key, required this.planet});
 
   final PageViewModel planet;
 
+  @override
+  State<BodyDetailsView> createState() => _BodyDetailsViewState();
+}
+
+class _BodyDetailsViewState extends State<BodyDetailsView> {
+  bool isLoaded = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18),
       child: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: .start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Image.asset(planet.image),
+            Stack(
+              alignment: .center,
+              children: [
+                SizedBox(
+                  height: 350,
+                  child: Flutter3DViewer(
+                    onLoad: (modelAddress) {
+                      setState(() {
+                        isLoaded = true;
+                      });
+                    },
+                    src: widget.planet.image3d,
+                  ),
+                ),
+                if (!isLoaded) CircularProgressIndicator(color: AppColors.red),
+              ],
             ),
             TextDetails(title: 'About', size: 24),
             SizedBox(height: 8),
-            TextDetails(title: planet.about, fontWeight: .w300, height: 1.5),
+            TextDetails(
+              title: widget.planet.about,
+              fontWeight: .w300,
+              height: 1.5,
+            ),
             SizedBox(height: 15),
-            ...planet.details.map((data) => TextDetails(title: data)),
+            ...widget.planet.details.map((data) => TextDetails(title: data)),
           ],
         ),
       ),

@@ -19,6 +19,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
   final List<PageViewModel> planetModel = [
     PageViewModel(
       image: 'assets/images/earth.png',
+      image3d: 'assets/3d/earth.glb',
       title: 'Earth',
       planetTitle: AppStrings.earthTitle,
       about: AppStrings.earth,
@@ -34,6 +35,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/jupiter.png',
+      image3d: 'assets/3d/jupiter.glb',
       title: 'Jupiter',
       planetTitle: AppStrings.jupiterTitle,
       about: AppStrings.jupiter,
@@ -49,6 +51,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/mars.png',
+      image3d: 'assets/3d/mars.glb',
       title: 'Mars',
       planetTitle: AppStrings.marsTitle,
       about: AppStrings.mars,
@@ -64,6 +67,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/mercury.png',
+      image3d: 'assets/3d/mercury.glb',
       title: 'Mercury',
       planetTitle: AppStrings.mercuryTitle,
       about: AppStrings.mercury,
@@ -79,6 +83,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/neptune.png',
+      image3d: 'assets/3d/neptune.glb',
       title: 'Neptune',
       planetTitle: AppStrings.neptuneTitle,
       about: AppStrings.neptune,
@@ -94,6 +99,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/saturn.png',
+      image3d: 'assets/3d/saturn.glb',
       title: 'Saturn',
       planetTitle: AppStrings.saturnTitle,
       about: AppStrings.saturn,
@@ -109,6 +115,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/sun.png',
+      image3d: 'assets/3d/sun.glb',
       title: 'Sun',
       planetTitle: AppStrings.sunTitle,
       about: AppStrings.sun,
@@ -124,6 +131,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/uranus.png',
+      image3d: 'assets/3d/uranus.glb',
       title: 'Uranus',
       planetTitle: AppStrings.uranusTitle,
       about: AppStrings.uranus,
@@ -138,6 +146,7 @@ class _BodyExploreViewState extends State<BodyExploreView> {
     ),
     PageViewModel(
       image: 'assets/images/venus.png',
+      image3d: 'assets/3d/venus.glb',
       title: 'Venus',
       planetTitle: AppStrings.venusTitle,
       about: AppStrings.venus,
