@@ -3,25 +3,13 @@ class PageViewModel {
   final String title;
   final String planetTitle;
   final String about;
-  final String distance;
-  final String lengthOfDay;
-  final String orbitalPeriod;
-  final String radius;
-  final String mass;
-  final String gravity;
-  final String surfaceArea;
+  final List<String> details;
 
   PageViewModel({
     required this.image,
     required this.title,
     required this.planetTitle,
     required this.about,
-    required this.distance,
-    required this.lengthOfDay,
-    required this.orbitalPeriod,
-    required this.radius,
-    required this.mass,
-    required this.gravity,
-    required this.surfaceArea,
+    required this.details,
   });
 }

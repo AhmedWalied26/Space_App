@@ -22,7 +22,10 @@ class PlanetPageView extends StatelessWidget {
         onPageChanged: onTapChanged,
         itemCount: plantes.length,
         itemBuilder: (context, index) {
-          return Image.asset(plantes[index].image);
+          return Padding(
+            padding: const EdgeInsets.all(16),
+            child: Image.asset(plantes[index].image),
+          );
         },
       ),
     );
